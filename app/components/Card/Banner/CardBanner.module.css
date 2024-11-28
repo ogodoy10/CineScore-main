@@ -1,0 +1,90 @@
+/* Contêiner principal */
+.bannerContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 3vh;
+    border-radius: 15px;
+    /* Cor de fundo de segurança */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.movieContainer {
+    display: flex;
+    width: 65%;
+    height: 100%;
+    z-index: 2;
+}
+
+.textContainer {
+    width: 70%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.synopsis {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.readMore {
+    color: #1e90ff;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.ratingContainer {
+    margin: 10px 0;
+    font-size: 18px;
+    color: gold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.classifyButton {
+    background-color: #1e90ff;
+    width: 40%;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 1vw;
+}
+
+/* Área da imagem */
+.imageContainer {
+    flex: 1;
+    margin-right: 1vw;
+    background-size: cover;
+    background-position: center;
+}
+
+.imageBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    z-index: 1;
+    opacity: 0.5;
+    filter: blur(8px);
+}

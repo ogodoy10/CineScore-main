@@ -1,0 +1,147 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 101%;
+    /* Mantido como está */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Escurece a tela */
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.modalContent {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.scrollableContent {
+    height: 105%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Background separado */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px) brightness(0.3);
+    /* Desfoque e escurecimento */
+    z-index: -1;
+    /* Envia o fundo para trás */
+}
+
+/* Nova seção para a imagem do filme */
+.imageContainer {
+    width: 200px;
+    /* Define a largura da imagem */
+    margin: 0 auto;
+    /* Centraliza horizontalmente e cria espaçamento */
+    position: relative;
+    padding: 50px 0;
+}
+
+.movieImage {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* A imagem ocupa 100% da largura do contêiner */
+    /* Mantém as proporções da imagem */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-size: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra para destacar a imagem */
+    z-index: 3;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 3;
+    /* Sempre acima de tudo */
+}
+
+.detailsContainer {
+    position: relative;
+    top: 30%;
+    height: auto;
+    padding: 0 5%;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 10%, rgba(28, 45, 61, 0.95) 60%, rgba(29, 36, 61, 0.9) 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.detailsTitle {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.ratingSection {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    flex-direction: column;
+    /* Alinha o título e as estrelas na vertical */
+    gap: 10px;
+    /* Espaço entre o título e as estrelas */
+}
+
+.averageRating {
+    font-size: 18px;
+    color: #ffcc00;
+}
+
+.userRating {
+    display: flex;
+    gap: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.synopsis, .additionalDetails {
+    width: 100%;
+    text-align: justify;
+}
+
+.synopsis h2, .additionalDetails h2 {
+    padding-top: 50px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.synopsis p, .additionalDetails p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #cccccc;
+}

@@ -1,0 +1,16 @@
+.movieWrapper {
+    padding-left: 2vw;  
+    width: 300px;
+}
+
+.rank {
+    position: absolute;
+    top: 40%;
+    padding-right: 3vw;
+    text-align: right;
+    font-size: 150px;
+    letter-spacing: -1.5vw;
+    color: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%);
+    z-index: -1; 
+}

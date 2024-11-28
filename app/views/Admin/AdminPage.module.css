@@ -1,0 +1,441 @@
+.container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    padding: 0 2.1%;
+    background-color: #0a0a0a;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgb(24, 24, 24);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.inputContainer {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.flexRow {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.sectionTitle {
+    font-size: 1.8rem;
+    margin: 15px 10px;
+    color: #e0e0e0;
+    width: 100%;
+}
+
+.imageContainer {
+    flex: 0 0 200px;
+    height: 300px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    background-color: #2a2a2a;
+    border: 1px solid #555;
+    border-radius: 10px;
+    display: flex;
+    /* Garante que a imagem seja centralizada se necessário */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Garante que a imagem não ultrapasse os limites do contêiner */
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Faz com que a imagem preencha o contêiner sem distorcer */
+    border-radius: 10px;
+    /* Repete o mesmo arredondamento do contêiner */
+}
+
+
+.inputField {
+    flex: 1 1 calc(50% - 20px);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    box-sizing: border-box;
+    height: 40px;
+    /* Uniformiza a altura dos inputs */
+}
+
+.textArea {
+    flex: 1 1 100%;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.dateField {
+    flex: 0 0 150px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    box-sizing: border-box;
+    height: 40px;
+    /* Uniformiza a altura dos inputs */
+}
+
+.readOnlyInput {
+    pointer-events: none;
+    user-select: none;
+    background-color: #1a1a1a;
+}
+
+.inputButtonContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1 1 100%;
+    align-items: flex-start;
+}
+
+.button {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    height: 40px;
+    /* Para alinhar com os inputs */
+}
+
+.button:hover {
+    background-color: #003d7a;
+}
+
+.button:active {
+    background-color: #002a56;
+}
+
+.modalClose {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modalClose:hover {
+    color: #ff5555;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    width: 35%;
+    /* Reduzido para corresponder ao design antigo */
+    max-height: auto;
+    /* Garantido que o conteúdo tenha altura automática */
+    overflow-y: auto;
+    text-align: center;
+}
+
+.modal h3 {
+    margin: 0;
+    color: #e0e0e0;
+    font-size: 1.5rem;
+}
+
+
+.genreOption {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #3a3a3a;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.genreOption.selected {
+    background-color: #0056b3 !important;
+    color: #fff;
+}
+
+.genreOption:hover:not(.selected) {
+    background-color: #555;
+}
+
+.modalSearchResults {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a1a1a;
+    padding: 30px;
+    /* Um pouco mais de padding para acomodar os resultados */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    width: 60%;
+    /* Largura maior para acomodar mais resultados */
+    min-height: 35%;
+    max-height: 80%;
+    /* Limita a altura */
+    overflow-y: auto;
+    /* Scroll para resultados longos */
+    text-align: center;
+}
+
+.modalSearchResults .modalClose {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modalSearchResults .modalClose:hover {
+    color: #ff5555;
+}
+
+.modalSearchResults h3 {
+    margin: 0 0 15px 0;
+    color: #e0e0e0;
+    font-size: 1.8rem;
+    /* Tamanho maior para destaque */
+}
+
+.modalSearchResults .grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os itens se ajustem em múltiplas linhas */
+    gap: 20px;
+    /* Espaçamento entre os itens */
+    justify-content: center;
+    /* Centraliza os itens */
+    margin-top: 20px;
+    /* Espaço acima dos resultados */
+}
+
+.modalSearchResults .smallCard {
+    width: 120px;
+    /* Define uma largura fixa */
+    height: 200px;
+    /* Define uma altura fixa */
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #e0e0e0;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    /* Animação ao passar o mouse */
+}
+
+.modalSearchResults .smallCard img {
+    width: 100%;
+    height: 70%;
+    /* Limita a altura da imagem */
+    object-fit: cover;
+    /* Ajusta a imagem para não distorcer */
+    border-radius: 5px;
+}
+
+.modalSearchResults .smallCard h4 {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+
+.cardOverlay {
+    position: absolute;
+    z-index: 10;
+    /* Div por cima dos cards */
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cardOverlay:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.modalSearchResults .smallCard:hover {
+    transform: scale(1.05);
+    /* Leve aumento ao passar o mouse */
+}
+
+.helperText {
+    margin: 10px 0;
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+.searchContainer {
+    margin: 10px;
+}
+
+.searchField {
+    flex: 1;
+    padding: 10px;
+    height: 40px;
+    border: 1px solid #555;
+    border-radius: 5px 0 0 5px;
+    /* Arredonda o lado esquerdo */
+    font-size: 1rem;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    outline: none;
+}
+
+.searchField:focus {
+    border-color: #0056b3;
+    background-color: #1a1a1a;
+}
+
+.searchButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    /* Remove o arredondamento do lado esquerdo */
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    height: 40px;
+    /* Certifique-se de que a altura seja a mesma do input */
+    width: 40px;
+    /* Ajuste para que fique proporcional */
+}
+
+.searchButton i {
+    font-size: 1.2rem;
+    /* Ajuste o tamanho do ícone */
+}
+
+.searchButton:hover {
+    background-color: #003d7a;
+}
+
+.searchButton:active {
+    background-color: #002a56;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    /* Espaça os botões uniformemente */
+}
+
+.confirmButton,
+.cancelButton {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    /* Ajusta o tamanho do botão */
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.confirmButton {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.confirmButton:hover {
+    background-color: #45a049;
+}
+
+.cancelButton {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.cancelButton:hover {
+    background-color: #e53935;
+}

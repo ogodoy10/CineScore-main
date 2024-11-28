@@ -1,0 +1,145 @@
+/* Estilo base do card */
+.movieCard {
+  width: 200px;
+  border-radius: 10px;
+  color: white;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, z-index 0.3s;
+  z-index: 1;
+  overflow: hidden;
+  /* Garante que nada ultrapasse o card base */
+}
+
+/* Ampliação do card */
+.movieCard.expanded {
+  transform: scale(1.3);
+  /* Amplia o card */
+  width: 550px;
+  /* Tamanho ampliado */
+  height: 300px;
+  /* Altura fixa */
+  /* Eleva sobre outros elementos */
+  position: absolute;
+  /* Remove o card do fluxo do layout */
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+  display: flex;
+  /* Layout flexível para alinhar conteúdo */
+  flex-direction: row;
+  /* Organiza imagem e conteúdo em linha */
+  z-index: 10;
+}
+
+.movieCard.expanded.firstCard{
+  left: 4vw;
+  z-index: 100;
+}
+
+.movieCard.expanded.lastCard {
+  left: -16vw; /* Ajuste maior para o último card */
+}
+
+.movieCard.expanded.secondLastCard {
+  left: -3.4vw; /* Ajuste menor para o penúltimo card */
+}
+
+/* Imagem no estado padrão */
+.imageContainer {
+  background-color: #b3b3b3;
+  border-radius: 10px;
+  width: 100%;
+  /* Imagem ocupa toda a largura do card padrão */
+  height: 300px;
+  /* Altura fixa para o card padrão */
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+  /* Transição suave para o estado ampliado */
+
+}
+
+/* Imagem no estado ampliado */
+.expanded .imageContainer {
+  width: 35%; /* Ajusta automaticamente com base na altura */
+  height: 100%; /* Garante que a imagem tenha a mesma altura da div de detalhes */
+  border-radius: 10px; /* Mantém o estilo arredondado no canto esquerdo */
+  background-size: cover; /* Faz a imagem preencher completamente o container */
+  background-position: center; /* Centraliza a imagem no container */
+  overflow: hidden; /* Garante que nada ultrapasse os limites do container */
+}
+
+
+/* Conteúdo expandido */
+.expandedContent {
+  display: flex;
+  background-color: #1a1a1a;
+  /* Cinza escuro */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  /* Alterado de absolute para relative */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  /* Garante que padding não ultrapasse os limites */
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1.0);
+  overflow: hidden;
+  /* Garante que nada ultrapasse os limites do contêiner */
+}
+
+
+/* Detalhes do filme */
+.detailsContainer {
+  flex: 2;
+  padding-left: 20px;
+  color: #e5e5e5;
+}
+
+.movieTitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.movieDetails {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #b3b3b3;
+}
+
+.movieSynopsis {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.viewMoreButton {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.viewMoreButton:hover {
+  background-color: #555;
+}
+
+.rating {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2d2d2d;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: 2px solid #f5c518;
+}

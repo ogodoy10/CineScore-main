@@ -1,0 +1,57 @@
+.figure {
+  fill: #4371f7;
+  height: 50px;
+  z-index: 2;
+  transition: transform 100ms ease;
+}
+
+.arm1,
+.wrist1,
+.arm2,
+.wrist2,
+.leg1,
+.calf1,
+.leg2,
+.calf2 {
+  transition: transform 100ms ease-in-out;
+}
+
+.arm1 {
+  transform: var(--transform-arm1);
+  transform-origin: 52% 45%;
+}
+
+.wrist1 {
+  transform: var(--transform-wrist1);
+  transform-origin: 59% 55%;
+}
+
+.arm2 {
+  transform: var(--transform-arm2);
+  transform-origin: 47% 43%;
+}
+
+.wrist2 {
+  transform: var(--transform-wrist2);
+  transform-origin: 35% 47%;
+}
+
+.leg1 {
+  transform: var(--transform-leg1);
+  transform-origin: 47% 64.5%;
+}
+
+.calf1 {
+  transform: var(--transform-calf1);
+  transform-origin: 55.5% 71.5%;
+}
+
+.leg2 {
+  transform: var(--transform-leg2);
+  transform-origin: 43% 63%;
+}
+
+.calf2 {
+  transform: var(--transform-calf2);
+  transform-origin: 41.5% 73%;
+}

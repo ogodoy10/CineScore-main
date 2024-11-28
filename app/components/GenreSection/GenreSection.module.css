@@ -1,0 +1,65 @@
+/* Estilos gerais da seção */
+.section {
+  position: relative;
+  /* Mantém o contexto do posicionamento dos elementos filhos */
+  padding: 20px;
+  /* Espaçamento ao redor dos elementos */
+  overflow: hidden;
+  /* Permite que o card ampliado apareça além dos limites */
+  z-index: 1;
+  /* Garante que a seção tenha um nível adequado de exibição */
+  min-height: 45vh;
+}
+
+/* Título da seção */
+/* Estilo para o título da seção */
+.title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  color: white;
+  position: relative;
+  /* Garante que o título não afete os elementos ao redor */
+  z-index: 1;
+  /* Define a prioridade do título */
+  overflow: visible;
+  /* Garante que nada seja cortado */
+}
+
+.swiper{
+  overflow: visible;
+}
+
+.customPrevButton,
+.customNextButton {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  width: 50px;
+  z-index: 2;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.carousel:hover .customPrevButton,
+.carousel:hover .customNextButton {
+  display: block;
+  opacity: 1;
+}
+
+.customPrevButton {
+  left: 0; /* Ajuste conforme necessário */
+}
+
+.customNextButton {
+  right: -20px; /* Ajuste conforme necessário */
+}
+
+.hidden {
+  z-index: 0;
+  pointer-events: none; /* Desativa a interação do botão */
+}

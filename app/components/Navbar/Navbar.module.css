@@ -1,0 +1,151 @@
+.Nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  padding: 10px 2.1%;
+  color: white;
+  box-sizing: border-box; 
+  z-index: 2;
+  background-color: #121212;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Garante alinhamento à esquerda */
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0; /* Remove o padding se estiver presente */
+  margin-right: auto; /* Empurra os outros elementos para a direita */
+}
+
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navLinks li {
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #ffffff; 
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-left: 20px;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 14px;
+  color: #ffffff; 
+  background-color: transparent; 
+}
+
+.searchInput::placeholder {
+  color: #cccccc;
+  opacity: 1;
+}
+
+.searchIcon {
+  font-size: 16px;
+  margin-left: 5px;
+  color: #ffffff; 
+}
+
+.signUpButton {
+  background-color: transparent;
+  border: 1px solid #ffffff; 
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  margin-left: 20px;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+.userActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto; /* Mantém a posição no canto direito */
+}
+
+.loggedUser {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userName {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+.logoutButton {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.signUpButton {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.profileContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto; /* Garante que fique no canto direito */
+}
+
+.profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover; /* Mantém a proporção da imagem */
+  border: 1px solid #ffffff;
+}
+
+.userName {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+.logoutButton {
+  background-color: transparent;
+  border: none; /* Remove a borda */
+  color: white;
+  font-size: 20px; /* Ajusta o tamanho do emoji */
+  cursor: pointer;
+  padding: 0; /* Remove o padding para centralizar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

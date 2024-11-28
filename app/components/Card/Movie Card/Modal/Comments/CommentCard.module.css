@@ -1,0 +1,80 @@
+.commentCard {
+    margin-bottom: 20px;
+}
+
+.replyCard {
+    margin-left: 40px;
+    border-left: 2px solid #555;
+    padding-left: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #444;
+}
+
+.time {
+    display: block;
+    font-size: 12px;
+    color: #888;
+}
+
+.content {
+    margin: 10px 0;
+    color: #ddd;
+}
+
+.replySection {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.replyTrigger {
+    color: #888;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.replyTrigger:hover {
+    color: #007bff; /* Azul ao passar o mouse */
+    text-decoration: underline;
+}
+
+.replyInput {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #555; /* Apenas o input terá linha */
+    background: transparent;
+    color: white;
+    padding: 5px;
+    outline: none;
+    resize: none;
+    font-size: 14px;
+    font-family: inherit;
+    display: block;
+}
+
+.replyInput::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.replies {
+    margin-top: 10px;
+}

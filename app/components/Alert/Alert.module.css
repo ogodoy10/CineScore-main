@@ -1,0 +1,60 @@
+/* Alert.module.css */
+.alertOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.alertContent {
+    background-color: #fff; /* Fundo do modal */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra */
+    text-align: center; /* Centraliza o texto */
+    max-width: 400px;
+    width: 90%; /* Ajusta a largura */
+}
+
+
+.alertContent p {
+    margin: 0 0 15px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.closeButton {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.closeButton:hover {
+    background-color: #003d7a;
+}
+
+.closeButton:active {
+    background-color: #002a56;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,35 @@
+.searchContainer {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    border-radius: 20px;
+    padding: 5px 10px;
+  }
+  
+  .searchInput {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    flex: 1; /* Permite que o input preencha o espaço disponível */
+  }
+  
+  .searchButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    padding: 0 5px;
+  }
+  
+  
+  .searchInput::placeholder {
+    color: #aaa;
+  }
+  
+  .searchButton:hover {
+    transform: scale(1.1);
+  }
+  
